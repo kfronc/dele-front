@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular2 playground</title>
+    
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/angular2/bundles/http.min.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script>
+        //configure system loader
+        System.config({
+            defaultJSExtensions: true,
+            packages: {
+                "/angular2": {"defaultExtension": false}
+            },
+            map: {
+                'ng2-translate': 'node_modules/ng2-translate',
+                'rxjs': 'node_modules/rxjs'
+            }
+        });
+        System.import('app/app.component').catch(console.log.bind(console));
+    </script>
+</head>
+
+<body>
+    <my-app>Loading...</my-app>
+</body>
+
+</html>

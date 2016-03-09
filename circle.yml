@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 5.1.0
+  python:
+    version: 2.7.10
+
+dependencies:
+  pre:
+    - pip install awsebcli
+  override:
+    - npm i
+
+deployment:
+  test:
+    branch: master
+    commands:
+      - sbt docker:publishLocal
+      - sbt elastic-beanstalk:dist
+      - eb deploy

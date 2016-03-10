@@ -2,7 +2,7 @@
   "name": "delegator-front",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run lite",
+    "start": "node_modules/lite-server/bin/lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",

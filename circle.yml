@@ -14,6 +14,4 @@ deployment:
   test:
     branch: master
     commands:
-      - sbt docker:publishLocal
-      - sbt elastic-beanstalk:dist
       - eb deploy
